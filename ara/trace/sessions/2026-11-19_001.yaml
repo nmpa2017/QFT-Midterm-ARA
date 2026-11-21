@@ -1,0 +1,30 @@
+session:
+  id: "2026-11-19_001"
+  date: "2026-11-19"
+  started: "2026-11-19T20:39:02+03:30"
+  last_turn: "2026-11-19T20:39:02+03:30"
+  turn_count: 1
+  summary: "Retrospective subsection 1.2 record: all analytic integral formulas and user-reported checks, with missing independent confirmations explicitly bounded."
+events_logged:
+  - {turn: 1, type: decision, id: N09, routing: direct, provenance: user-revised, summary: "Use Eq. (13.7) and evaluated regulated expressions for derivative identity."}
+  - {turn: 1, type: experiment, id: N10, routing: direct, provenance: user, summary: "User reports expected cutoff bubble expansion and derivative checks plus DR bubble and derivative checks."}
+  - {turn: 1, type: dead_end, id: N11, routing: direct, provenance: ai-suggested, summary: "Undefined comparison symbol remedied by self-contained cells."}
+  - {turn: 1, type: question, id: N12, routing: direct, provenance: ai-suggested, summary: "Standalone DR tadpole confirmation and independent cutoff bubble CAS integration remain unrecorded."}
+ai_actions:
+  - turn: 1
+    action: "Skill API unavailable; read local manager instructions; archived equations B-03 through B-15, confirmations, source decision, and failed notebook-state approach. No fresh Mathematica execution."
+    provenance: ai-executed
+    files_changed:
+      - ara/evidence/section-1.2-regularized-integrals.md
+      - ara/trace/exploration_tree.yaml
+      - ara/trace/sessions/2026-11-19_001.yaml
+      - ara/trace/sessions/session_index.yaml
+      - ara/trace/pm_reasoning_log.yaml
+claims_touched: []
+logic_revisions: []
+key_context:
+  - turn: 1
+    excerpt: "User: This check was also passed. Now load research-manager. Record what was derived or tested, the decision made, any failed approach, and whether the result is open, derived, or Mathematica-checked."
+open_threads:
+  - "N12: evidence-calibrated check gaps and user-controlled source-map completion."
+  - "N04: earlier subsection 1.1 convention mapping remains unresolved."

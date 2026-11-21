@@ -1,0 +1,29 @@
+sessions:
+  - id: "2026-11-17_001"
+    date: "2026-11-17"
+    path: "2026-11-17_001.yaml"
+    summary: "Retrospective subsection 1.1 record: user-tested diagrams and PaVe structures; normalization and exact anchors open."
+  - id: "2026-11-19_001"
+    date: "2026-11-19"
+    path: "2026-11-19_001.yaml"
+    summary: "Subsection 1.2 analytic formulas and user-reported Mathematica checks; evidence gaps retained explicitly."
+    turn_count: 1
+    events_count: 4
+    claims_touched: []
+    open_threads: 2
+  - id: "2026-11-21_001"
+    date: "2026-11-21"
+    path: "2026-11-21_001.yaml"
+    summary: "Subsection 1.3 counterterms analytically checked; finite bubble comparison derived; saved Mathematica evidence pending."
+    turn_count: 1
+    events_count: 3
+    claims_touched: []
+    open_threads: 1
+  - id: "2026-11-22_001"
+    date: "2026-11-22"
+    path: "2026-11-22_001.yaml"
+    summary: "Subsection 2.1 evidence scope preserved; 2.2 has seven passing user-reported tests; 2.3 scaling derived and comparison table supplied, execution open."
+    turn_count: 3
+    events_count: 6
+    claims_touched: []
+    open_threads: 3

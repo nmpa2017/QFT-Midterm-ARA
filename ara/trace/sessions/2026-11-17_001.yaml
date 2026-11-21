@@ -1,0 +1,26 @@
+session:
+  id: "2026-11-17_001"
+  date: "2026-11-17"
+  started: "2026-11-17T00:21:55+03:30"
+  last_turn: "2026-11-17T00:21:55+03:30"
+  turn_count: 1
+  summary: "User requested retrospective recording of subsection 1.1 derivations, tests, decisions, failed approaches, and evidence-calibrated status."
+events_logged:
+  - {turn: 1, type: experiment, id: N01, routing: direct, provenance: user, summary: "Successful diagrams and A0/three-B0 outputs reported by user."}
+  - {turn: 1, type: dead_end, id: N02, routing: direct, provenance: ai-suggested, summary: "Recorded unpatched loading, default model lookup, and incorrect diagnostic suggestions."}
+  - {turn: 1, type: decision, id: N03, routing: direct, provenance: user-revised, summary: "Anchors only for written equations; reasoning precedes code; protected files remain user-edited."}
+  - {turn: 1, type: question, id: N04, routing: direct, provenance: ai-suggested, summary: "Normalization, momentum convention, symbol names, and source anchors remain open."}
+ai_actions:
+  - turn: 1
+    action: "Skill API unavailable; read local research-manager instructions and taxonomy; recorded retrospective evidence and trace without running Mathematica or changing protected files."
+    provenance: ai-executed
+    files_changed:
+      - ara/evidence/section-1.1-user-reported-tests.md
+      - ara/trace/exploration_tree.yaml
+      - ara/trace/sessions/2026-11-17_001.yaml
+      - ara/trace/sessions/session_index.yaml
+      - ara/trace/pm_reasoning_log.yaml
+claims_touched: []
+logic_revisions: []
+open_threads:
+  - "N04: distinguish verified package structures from unverified project normalization and source citations."

@@ -1,0 +1,270 @@
+# Exploration Tree: Midterm QFT Project
+
+questions:
+  - id: Q01
+    question: "How do functional methods recover operator-based results?"
+    support_level: explicit
+    children:
+      - id: D01
+        type: decision
+        rationale: "Selected path integral formalism as the primary framework for its efficiency in handling multi-point correlation functions."
+        children:
+          - id: E01
+            type: experiment
+            verifies: C01
+      - id: D02
+        type: decision
+        rationale: "Reconciled path integral approach with Wick's theorem by evaluating the identity between functional derivatives and operator contractions."
+        children:
+          - id: E02
+            type: experiment
+            verifies: C02
+  - id: Q02
+    question: "What are the rules for diagrammatic expansion?"
+    support_level: explicit
+    children:
+      - id: E03
+        type: experiment
+        verifies: C03
+
+# Retrospective record requested by the user; prior nodes preserved unchanged.
+# Evidence is user-reported, not an assistant-executed Mathematica run.
+# Timestamp is recording time, not the time of each historical test.
+tree:
+  - id: N01
+    type: experiment
+    title: "Subsection 1.1 diagram and PaVe tests"
+    provenance: user
+    timestamp: "2026-11-17T00:21:55+03:30"
+    result: "User reports successful Phi4 diagrams and tadpole A0 / three bubble B0 terms after patched integration and explicit model paths. Mathematica-checked for these structures only."
+    evidence: ["ara/evidence/section-1.1-user-reported-tests.md"]
+    status: resolved
+  - id: N02
+    type: dead_end
+    title: "Unpatched integration and guessed model lookup"
+    provenance: ai-suggested
+    timestamp: "2026-11-17T00:21:55+03:30"
+    hypothesis: "Separate package loads and Model -> Phi4 in the default directory would suffice."
+    failure_mode: "FourVector definition conflict; Phi4 example not located by default-directory lookup. Incorrect prefixed function-name and FAModelsDirectory-variable suggestions added confusion."
+    lesson: "Use patched FeynArts and both full Model and GenericModel paths from FeynCalc's example directory; distinguish patch conflicts from model lookup."
+    evidence: ["ara/evidence/section-1.1-user-reported-tests.md"]
+    status: resolved
+  - id: N03
+    type: decision
+    title: "Anchor only written equations; derive before checking"
+    provenance: user-revised
+    timestamp: "2026-11-17T00:21:55+03:30"
+    choice: "Use sequential anchors only for important equations actually written in the notebook; latest draft uses B-01 and B-02. Present reasoning before package checks; user pastes notebook and equation-map content."
+    alternatives: ["Preallocate an anchor registry", "Use package output without preceding reasoning"]
+    evidence: ["ara/evidence/section-1.1-user-reported-tests.md"]
+    status: resolved
+  - id: N04
+    type: question
+    title: "Complete the convention and source checks"
+    provenance: ai-suggested
+    timestamp: "2026-11-17T00:21:55+03:30"
+    description: "B-01/B-02 are derived drafts, not fully checked Euclidean package matches. Verify model coupling versus project g, mphi naming, all-incoming channel mapping, Wick/measure normalization, and exact source anchors."
+    also_depends_on: [N01, N03]
+    evidence: ["ara/evidence/section-1.1-user-reported-tests.md"]
+    status: open
+  - id: N05
+    type: decision
+    title: "Subsection 1.2 begins with cutoff tadpole derivation only"
+    provenance: user
+    timestamp: "2026-11-19T15:38:31+03:30"
+    choice: "Treat tadpole and zero-momentum bubble in each regulator separately, with derivation followed by Mathematica check. Begin with T in d=4 with a spherical hard cutoff."
+    alternatives: ["Present all regulator calculations at once"]
+    evidence: ["User instruction in current conversation; saved notebook input pending user paste."]
+    status: resolved
+  - id: N06
+    type: experiment
+    title: "Analytic hard-cutoff tadpole evaluation"
+    provenance: ai-suggested
+    timestamp: "2026-11-19T15:38:31+03:30"
+    result: "Derived using angular area 2 Pi^2 and u=k^2: T_Lambda=(Lambda^2-m^2 log(1+Lambda^2/m^2))/(16 Pi^2). Large-cutoff expansion: [Lambda^2-m^2 log(Lambda^2/m^2)-m^4/Lambda^2+O(Lambda^-4)]/(16 Pi^2). Status derived, not Mathematica-checked. Proposed next notebook anchors B-03 through B-05; exact lecture-note anchors pending verification."
+    evidence: ["Analytic derivation supplied in current assistant response; no Mathematica execution or notebook modification."]
+    also_depends_on: [N05]
+    status: open
+  - id: N07
+    type: experiment
+    title: "Cutoff tadpole exact value and expansion confirmed"
+    provenance: user
+    timestamp: "2026-11-19"
+    result: "User confirmed that the exact integral minus the expected formula vanishes, then confirmed the large-cutoff expansion check. B-03 through B-05 are Mathematica-checked by user report, superseding the earlier derived-only milestone N06."
+    evidence: ["Current conversation: user reported exact difference vanished and subsequently stated all is good and confirmed."]
+    also_depends_on: [N06]
+    status: resolved
+  - id: N08
+    type: decision
+    title: "Proceed to DR tadpole derivation, before its code check"
+    provenance: user
+    timestamp: "2026-11-19"
+    choice: "Evaluate the same massive tadpole with d=4-epsilon and one mu^epsilon loop factor; derive analytically before Mathematica checking."
+    evidence: ["Current user request; derivation in assistant response. Exact source anchors remain pending; proposed equations B-06 through B-08 are derived, not Mathematica-checked."]
+    also_depends_on: [N07]
+    status: resolved
+  - id: N09
+    type: decision
+    title: "Use DR master identity and compare evaluated expressions"
+    provenance: user-revised
+    timestamp: "2026-11-19T20:39:02+03:30"
+    choice: "Use verified Fields Notes Eq. (13.7), printed p. 114, for DR specializations; revised B-06 denotes this identity. Prove the mass derivative identity from evaluated T and B, not only the integrands."
+    evidence: ["ara/evidence/section-1.2-regularized-integrals.md"]
+    also_depends_on: [N08]
+    status: resolved
+  - id: N10
+    type: experiment
+    title: "Bubble cutoff expansion and regulated derivative checks pass"
+    provenance: user
+    timestamp: "2026-11-19T20:39:02+03:30"
+    result: "User-reported Mathematica confirmation of cutoff expansion B-11, cutoff derivative identity B-12, DR bubble exact rearrangement/expansion B-13/B-14, and exact plus pole-and-finite derivative identity B-15. Analytic formulas B-03 through B-15 recorded with revised B-06. Standalone tadpole DR check and direct cutoff bubble integration are not separately confirmed."
+    evidence: ["ara/evidence/section-1.2-regularized-integrals.md"]
+    also_depends_on: [N07, N09]
+    status: resolved
+  - id: N11
+    type: dead_end
+    title: "State-dependent Mathematica comparison used an undefined symbol"
+    provenance: ai-suggested
+    timestamp: "2026-11-19T20:39:02+03:30"
+    hypothesis: "The earlier cell had already assigned tCutoffExpected when the expansion comparison was evaluated."
+    failure_mode: "User output retained the undefined symbol instead of evaluating a difference or equality; exact notebook-state cause unknown."
+    lesson: "Use self-contained cells with definitions preceding comparisons; user confirmed the repaired exact check."
+    evidence: ["ara/evidence/section-1.2-regularized-integrals.md"]
+    status: resolved
+  - id: N12
+    type: question
+    title: "Separate derived formulas from independently reported checks"
+    provenance: ai-suggested
+    timestamp: "2026-11-19T20:39:02+03:30"
+    description: "Confirm standalone B-07/B-08 check output and, if desired, directly integrate B-09 in Mathematica. Current bubble cutoff exact expression is derived and consistency-checked, not independently integrated by CAS. Final source-map entries and notebook note remain user-controlled."
+    evidence: ["ara/evidence/section-1.2-regularized-integrals.md"]
+    also_depends_on: [N10]
+    status: open
+  - id: N13
+    type: decision
+    title: "Record subsection 1.3 without inferring Mathematica outputs"
+    provenance: user
+    timestamp: "2026-11-21T18:17:53+03:30"
+    choice: "Link each subsection 1.3 result to anchors and actual saved cells/outputs where present; do not alter notebook or invent results."
+    evidence: ["ara/evidence/section-1.3-verification-status.md"]
+    status: resolved
+  - id: N14
+    type: experiment
+    title: "Read-only saved notebook evidence inspection"
+    provenance: ai-executed
+    timestamp: "2026-11-21T18:17:53+03:30"
+    result: "Saved notebook ends at subsection 1.2; subsection 1.3 cells and outputs are absent. Record B-17 through B-20 as analytically checked, B-21 through B-24 as derived with CAS confirmation open; do not claim evaluated zeros. No Mathematica run performed."
+    evidence: ["ara/evidence/section-1.3-verification-status.md", "QFTMidtermNotebook.nb:5147-5183"]
+    also_depends_on: [N13]
+    status: resolved
+  - id: N15
+    type: question
+    title: "Obtain saved subsection 1.3 Input/Output provenance"
+    provenance: ai-suggested
+    timestamp: "2026-11-21T18:17:53+03:30"
+    description: "Actual cell UUIDs, output labels and evaluated results for B-16 through B-24 cannot be linked until the saved notebook includes this subsection or outputs are provided."
+    evidence: ["ara/evidence/section-1.3-verification-status.md"]
+    also_depends_on: [N14]
+    status: open
+  - id: N16
+    type: question
+    title: "Begin subsection 1.4 with the massive MS beta-function definition"
+    provenance: user
+    timestamp: "2026-11-21T18:48:24+03:30"
+    description: "User requests conceptual discussion before detailed subsection 1.4 calculations: relate the massless Chapter 13 definition to massive theory, fixed bare parameters, mass-independent MS subtraction, and fixed points."
+    status: resolved
+  - id: N17
+    type: experiment
+    title: "Subsection 1.4 beta function, fixed point, and field counterterm checks"
+    provenance: user
+    timestamp: "2026-11-21T21:58:50+03:30"
+    result: "User executed Mathematica check: fixed-bare beta function beta_g = -eps g + 3 g^2, Wilson-Fisher fixed point g_* = eps/3, and vanishing derivative d/dpSq Sigma_tad = 0 confirming delta Z_phi^(1) = 0. Formulas B-25 through B-30 confirmed Mathematica-checked."
+    evidence: ["User-reported Mathematica output in conversation", "ara/anchor/equation-map.md:439-508"]
+    also_depends_on: [N16]
+    status: resolved
+  - id: N18
+    type: dead_end
+    title: "Mathematica syntax errors in initial subsection 1.4 check script"
+    provenance: ai-suggested
+    timestamp: "2026-11-21T21:29:24+03:30"
+    hypothesis: "CoefficientAll, direct D[..., p^2], and raw Series on composite expression would evaluate smoothly."
+    failure_mode: "CoefficientAll undefined; D::ivar on p^2; Series returned InverseFunction[SeriesData,...]; Solve threw Solve::nsmet."
+    lesson: "Use standard Coefficient on Normal[Series[...]], define pSq as a symbol rather than p^2 for differentiation, and avoid nonstandard helper names."
+    status: resolved
+  - id: N19
+    type: decision
+    title: "Start Part 2 subsection 2.1: two-loop sunset graph isolation and massless DR"
+    provenance: user
+    timestamp: "2026-11-21T22:13:20+03:30"
+    choice: "Generate two-loop self-energy in FeynArts/FeynCalc, isolate sunset topology via StartingTopologies -> Theta and Adjacencies -> {4}, perform Wick rotation to Euclidean space, and evaluate H(p) in massless DR at p^2 > 0."
+    evidence: ["project-reference.txt:55-70"]
+    status: resolved
+  - id: N20
+    type: dead_end
+    title: "FeynArts option errors and missing generic model path"
+    provenance: ai-suggested
+    timestamp: "2026-11-21T22:27:47+03:30"
+    hypothesis: "CreateTopologies accepts ExcludeTopologies -> {SelfEnergy} and Restrictions -> 1PI, and InsertFields finds Phi4.gen with bare model names."
+    failure_mode: "FeynArts threw delundef for SelfEnergy, noopt for Restrictions and FAModelsDirectory in CreateTopologies/InsertFields, and noopen for Phi4.gen."
+    lesson: "Use full FileNameJoin[{modelDir, 'Phi4'}] for Model and GenericModel, omit invalid options from CreateTopologies, and isolate sunset via StartingTopologies -> Theta, Adjacencies -> {4}."
+    status: resolved
+  - id: N21
+    type: experiment
+    title: "Subsection 2.1 sunset double convolution and Laurent expansion check"
+    provenance: user
+    timestamp: "2026-11-22T01:01:31+03:30"
+    result: "User executed Mathematica check evaluating H(p) via two successive DR master convolutions: inner integral J_1,1((p-k)^2) and outer integral yielding exact gamma ratio B-34. Laurent expansion confirmed pole coefficient -1/(512 Pi^4 eps) = -p^2/(2(16 Pi^2)^2 eps) and finite constant (-13 + 4 gamma_E - 4 log(4 Pi))/(2048 Pi^4). B-31 through B-39 Mathematica-checked."
+    evidence: ["User-reported Mathematica output in conversation", "ara/anchor/equation-map.md"]
+    also_depends_on: [N19]
+    status: resolved
+  - id: N22
+    type: decision
+    title: "Record anchor-specific verification scope without modifying protected deliverables"
+    provenance: user-revised
+    timestamp: "2026-11-22"
+    choice: "Retrospectively record decisions, derivations, failed approaches, and pasted Mathematica evidence. Preserve notebook and equation map. B-33–B-35 are checked via the assumed convolution identity; B-36–B-37 are checked at unit scales; graph signs, master-identity derivation, general-scale expansion and subdivergences remain analytical or independently open."
+    evidence: ["ara/evidence/section-2.1-user-reported-checks.md"]
+    status: resolved
+  - id: N23
+    type: question
+    title: "Resolve overly broad historical Mathematica-check labels"
+    provenance: ai-suggested
+    timestamp: "2026-11-22"
+    description: "N21 states all B-31–B-39 are Mathematica-checked, but pasted output establishes only convolution composition and unit-scale expansion. N17 records user confirmation; the supplied beta script hard-coded its final beta coefficient. Preserve historical records and distinguish user confirmation from independently demonstrated test coverage."
+    also_depends_on: [N17, N21, N22]
+    evidence: ["ara/evidence/section-2.1-user-reported-checks.md"]
+    status: unresolved
+  - id: N24
+    type: decision
+    title: "Derive and check subsection 2.2 with fixed conventions and sequential anchors"
+    provenance: user-revised
+    timestamp: "2026-11-22T02:07:24+03:30"
+    choice: "Use B-40–B-45 for field renormalization, anomalous dimension, eta and finite-log verification; derive before CAS checks, and provide pasteable conclusion/equation-map text without modifying protected deliverables."
+    evidence: ["ara/evidence/section-2.2-user-reported-checks.md"]
+    status: resolved
+  - id: N25
+    type: experiment
+    title: "Seven subsection 2.2 Mathematica checks pass by user-pasted output"
+    provenance: user
+    timestamp: "2026-11-22T02:07:24+03:30"
+    result: "Z_phi=1-g^2/(12 epsilon), gamma_phi=g^2/12, eta=epsilon^2/54. All seven tests return True for pole coefficient/cancellation, anomalous dimension, fixed-point exponent, sufficiency of one-loop fixed point and both normalized momentum logarithms. Conditional on input H and analytical Euclidean prefactor; no independent diagram-sign test. No failed CAS run reported; Module symbol suffixes were a display confusion only."
+    evidence: ["ara/evidence/section-2.2-user-reported-checks.md"]
+    also_depends_on: [N24]
+    status: resolved
+  - id: N26
+    type: decision
+    title: "Finish subsection 2.3 by scaling analysis and provide comparison-table code"
+    provenance: user
+    timestamp: "2026-11-22"
+    choice: "Derive source/field dimensions, delta, fluid identifications and scattering slope; expand before epsilon=1, then supply Mathematica table code. Keep equation-map additions paste-only."
+    evidence: ["ara/evidence/section-2.3-derived-status.md"]
+    status: resolved
+  - id: N27
+    type: question
+    title: "Confirm numerical table execution without overstating plausibility checks"
+    provenance: ai-suggested
+    timestamp: "2026-11-22"
+    description: "B-46–B-52 are derived; no execution of the supplied expansion/table cell reported. Numerical deviations discussed as plausible low-order truncation effects, not independent proof or error bounds. Precise lecture-note locators remain open; no failed CAS run reported."
+    also_depends_on: [N26]
+    evidence: ["ara/evidence/section-2.3-derived-status.md"]
+    status: open

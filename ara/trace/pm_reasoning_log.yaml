@@ -1,0 +1,30 @@
+entries:
+  - timestamp: "2026-11-17T00:21:55+03:30"
+    session: "2026-11-17_001"
+    turn: 1
+    reasoning: "User explicitly requested retrospective recording. Record prior conversation as user-reported evidence, not a fresh run. Diagram rendering and PaVe structures have empirical user affirmation; full Euclidean normalization and exact source anchors do not. No generalized claim promoted and no existing logic revised; old checked labels alone are insufficient proof. Preserve earlier trace nodes and both user-protected deliverables. Skill tool unavailable; local skill instructions used instead."
+  - timestamp: "2026-11-19T20:39:02+03:30"
+    session: "2026-11-19_001"
+    turn: 1
+    reasoning: "Explicit retrospective recording requested. Capture derived formulas and checks as user-reported, not agent-executed. Latest affirmation closes DR bubble/derivative check; no silence-based promotion of standalone DR tadpole check. Cutoff bubble direct CAS integration was never supplied, so retain that distinction. Revised B-06 source identity replaces earlier draft without rewriting historical trace. No generalized claim promotion or unrelated logic churn; notebook and equation map untouched."
+  - timestamp: "2026-11-21T18:29:47+03:30"
+    session: "2026-11-21_001"
+    turn: 1
+    reasoning: "Completed indexing of the interrupted subsection 1.3 recording. Saved notebook was inspected read-only and ends at subsection 1.2. No subsection 1.3 evaluated cell links can honestly be supplied. Preserve derived/analytically checked versus Mathematica-checked distinction; no new failed CAS run reported. Latest repeated recording request adds no new calculation or result, so avoid duplicate scientific events. Skill loader remains unavailable; local instructions previously read."
+  - timestamp: "2026-11-21T18:48:24+03:30"
+    session: "2026-11-21_001"
+    turn: 2
+    reasoning: "Recorded user opening question N16. Conceptual explanation is not user-confirmed or a CAS result; no logic claims promoted. Existing equation map supplies conventions, not a verified quotation of subsection 1.4. Local research-manager instructions read because this skill is not in the callable skill catalog."
+  - timestamp: "2026-11-22T01:32:51+03:30"
+    session: "2026-11-22_001"
+    turn: 1
+    reasoning: "Completed interrupted retrospective recording request without duplicating earlier N17–N21 events. Local research-manager instructions used after unavailable skill loader. Preserved historical trace and protected notebook/equation map. Recorded exact user-pasted H and unit-scale Series output; no agent Mathematica run. Did not promote blanket checked labels: master identity was input, signs and subdivergences were derived, and scales were set to one for Series. N23 flags excessive historical verification scope for review. No unrelated logic-layer changes."
+  - timestamp: "2026-11-22T02:07:24+03:30"
+    session: "2026-11-22_001"
+    turn: 2
+    reasoning: "Explicit retrospective recording of subsection 2.2. Seven True results are actual user-pasted Mathematica evidence, not fresh agent execution. Capture derived/CAS-checked downstream algebra while preserving conditional graph sign and input H scope. No failed run invented for confusing Module suffixes. No generalized logic claims promoted; protected notebook/equation map unchanged. Local instructions applied after skill-loader failure."
+  - session: "2026-11-22_001"
+    turn: 3
+    date: "2026-11-22"
+    reasoning: "Recorded subsection 2.3 retrospectively at explicit user request. No execution confirmation for table/Series code: retain derived status despite user finding reasoning straightforward. Numerical closeness is an assistant interpretation, not empirical resolution or an uncertainty bound; record caveats without promoting generalized claims. No failed run invented. Notebook/equation map unchanged; local instructions used after unavailable skill loader."
+

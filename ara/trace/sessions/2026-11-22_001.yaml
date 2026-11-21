@@ -1,0 +1,54 @@
+session:
+  id: "2026-11-22_001"
+  date: "2026-11-22"
+  summary: "Retrospective subsection 2.1 record: exact sunset expression and unit-scale Laurent output captured; analytical versus CAS scope distinguished."
+  turn_count: 1
+  timing_note: "Date from session context; exact recording clock time not sampled."
+events_logged:
+  - {turn: 1, type: decision, id: N22, routing: direct, provenance: user-revised, summary: "Record evidence and failures; preserve notebook and equation map."}
+  - {turn: 1, type: question, id: N23, routing: direct, provenance: ai-suggested, summary: "Flag overbroad historical CAS labels; preserve earlier trace text."}
+ai_actions:
+  - turn: 1
+    action: "Skill loader reported research-manager unavailable earlier in this request; applied local skill instructions already read. Inspected existing trace; recorded conversation evidence, not a fresh Mathematica run."
+    provenance: ai-executed
+    files_changed: ["ara/evidence/section-2.1-user-reported-checks.md", "ara/trace/exploration_tree.yaml", "ara/trace/sessions/2026-11-22_001.yaml", "ara/trace/sessions/session_index.yaml", "ara/trace/pm_reasoning_log.yaml"]
+claims_touched: []
+logic_revisions: []
+key_context:
+  - "User explicitly requests recording derived/tested results, decisions, failures and open/derived/Mathematica-checked status."
+  - "Pasted exact H retains mu and pSq, but Series was performed after both were set to one."
+open_threads:
+  - "N23: blanket checked labels exceed explicitly pasted evidence; anchor-specific scope recorded for review."
+  - "Precise lecture-note locators and saved notebook output links for subsection 2.1 remain open."
+  - "No fresh Mathematica execution; general-scale expansion and independent symmetry/sign/subdivergence tests not supplied."
+continuation_turns:
+  - turn: 2
+    timestamp: "2026-11-22T02:07:24+03:30"
+    summary: "Subsection 2.2 derived and user-executed algebra confirmed; seven Mathematica tests True."
+    events_logged:
+      - {type: decision, id: N24, routing: direct, provenance: user-revised, summary: "Retain conventions, anchors B-40–B-45 and paste-only equation-map workflow."}
+      - {type: experiment, id: N25, routing: direct, provenance: user, summary: "Record seven passing subsection 2.2 tests with conditional diagram-input scope."}
+    ai_actions:
+      - "Attempted research-manager skill load; unavailable. Applied previously read local instructions and recorded pasted output without claiming a new CAS run."
+    files_changed: ["ara/evidence/section-2.2-user-reported-checks.md", "ara/trace/exploration_tree.yaml", "ara/trace/sessions/2026-11-22_001.yaml", "ara/trace/sessions/session_index.yaml", "ara/trace/pm_reasoning_log.yaml"]
+    claims_touched: []
+    logic_revisions: []
+    open_threads:
+      - "Precise lecture-note references for two-loop coefficients and saved notebook cell/output provenance remain unverified."
+      - "Independent diagram-sign/symmetry verification is outside the seven algebra tests."
+    failed_approaches: "None reported for subsection 2.2; Module suffixes required display explanation, not a code repair."
+  - turn: 3
+    date: "2026-11-22"
+    summary: "Subsection 2.3 scaling relations and numerical plausibility recorded as derived; comparison-table execution unconfirmed."
+    events_logged:
+      - {type: decision, id: N26, routing: direct, provenance: user, summary: "Derive final subsection, then provide numerical comparison code and pasteable anchors."}
+      - {type: question, id: N27, routing: direct, provenance: ai-suggested, summary: "Retain open table execution and precise-source verification; plausibility is not proof."}
+    ai_actions:
+      - "Skill loader unavailable; applied previously read local research-manager instructions. Recorded derivations and comparison caveats without claiming Mathematica execution."
+    files_changed: ["ara/evidence/section-2.3-derived-status.md", "ara/trace/exploration_tree.yaml", "ara/trace/sessions/2026-11-22_001.yaml", "ara/trace/sessions/session_index.yaml", "ara/trace/pm_reasoning_log.yaml"]
+    claims_touched: []
+    logic_revisions: []
+    failed_approaches: "None reported; unexpanded epsilon=1 substitution was warned against, not executed as a failed experiment."
+    open_threads:
+      - "N27: Mathematica series/table execution and precise lecture-note locators remain unconfirmed."
+    result_status: "B-46–B-52 derived; not yet Mathematica-checked."
